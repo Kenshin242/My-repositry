@@ -1,20 +1,13 @@
-meme_dict = {
-    "КРИНЖ": "Что-то очень странное или стыдное",
-    "ЛОЛ": "Что-то очень смешное",
-    "РОФЛ": "Шутка",
-    "ЩИЩ": "Одобрение или восторг",
-    "КРИПОВЫЙ": "Страшный, пугающий",
-    "АГРИТЬСЯ": "Злиться"
-}
+import random
 
-print("Добро пожаловать в словарь мемов!")
+symbols = "+-/*!&$#?=@abcdefghijklnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
 
-for i in range(5):
-    word = input("Введите непонятное слово (большими буквами!): ")
-    if word in meme_dict.keys():
-        znachenie = meme_dict[word]
-        print(word + ": " + znachenie)
-    else:
-        print(word + ": Не найдено")
-        
-print("Спасибо за использование словаря!")
+pass_len = int(input('Сколько символов пароль: '))
+
+password = ''
+
+for i in range(pass_len):
+
+    password += random.choice(symbols)
+
+print(password)
